@@ -1,19 +1,14 @@
-<?php namespace Config;
+<?php namespace config;
 
-
- class Autoload
+class Autoload
 {
-	public static function Start ()
-	{
-        spl_autoload_register(function($instancia)
-        {
-  
-              $ruta=ROOT.str_replace("\\","/",$instancia).".php";
-              include_once($ruta);
+    public static function Start()
+    {
+        spl_autoload_register(function ($instancia) {
+
+            $ruta = ROOT . str_replace("\\", "/", $instancia) . ".php";
+            include_once ($ruta);
 
         });
-     }
- }
-
-
- ?>
+    }
+}
